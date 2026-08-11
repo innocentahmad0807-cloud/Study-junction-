@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Study Junction | Free Educational Website</title>
+
+<meta name="description"
+content="Study Junction - Class 1 to 10 Maths, Science, English notes, questions, answers and quizzes.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1100px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#172033;
+}
+
+.logo span{
+    color:#2563eb;
+}
+
+nav a{
+    text-decoration:none;
+    color:#172033;
+    margin-left:22px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#eaf2ff,#ffffff);
+    padding:80px 20px;
+}
+
+.hero-content{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#2563eb;
+}
+
+.hero p{
+    font-size:19px;
+    color:#667085;
+    max-width:700px;
+    margin:auto;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 23px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:5px;
+}
+
+.primary{
+    background:#2563eb;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#172033;
+    border:1px solid #ccd3df;
+}
+
+/* SECTIONS */
+
+section{
+    padding:70px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:35px;
+    margin-bottom:8px;
+}
+
+.title p{
+    color:#667085;
+}
+
+/* CLASS CARDS */
+
+.classes{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:18px;
+}
+
+.class-card{
+    background:white;
+    padding:25px 15px;
+    text-align:center;
+    border-radius:12px;
+    border:1px solid #e3e7ee;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.class-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.class-card h3{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.class-card p{
+    color:#667085;
+    font-size:14px;
+}
+
+/* SUBJECTS */
+
+.subject-section{
+    background:#eef3f9;
+}
+
+.subjects{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.subject{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.subject .icon{
+    font-size:45px;
+}
+
+.subject h3{
+    margin:12px 0;
+}
+
+.subject p{
+    color:#667085;
+}
+
+/* NOTES */
+
+.notes{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.notes-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.notes-box h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.notes-box p{
+    color:#667085;
+}
+
+.note-list{
+    margin-top:20px;
+}
+
+.note-list div{
+    background:#f4f7fb;
+    padding:13px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+/* QUIZ */
+
+.quiz{
+    background:#eef3f9;
+}
+
+.quiz-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.quiz-box h2{
+    margin-bottom:20px;
+}
+
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.options button{
+    padding:15px;
+    background:white;
+    border:1px solid #ccd3df;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.options button:hover{
+    background:#2563eb;
+    color:white;
+}
+
+#result{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#667085;
+    margin:15px 0 25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    padding:30px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#b8c0cc;
+    margin-top:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .classes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .subjects{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .notes{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .classes{
+        grid-template-columns:1fr;
+    }
+
+    .subjects{
+        grid-template-columns:1fr;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+<div class="navbar">
+
+<div class="logo">
+Study <span>Junction</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#classes">Classes</a>
+<a href="#subjects">Subjects</a>
+<a href="#notes">Notes</a>
+<a href="#quiz">Quiz</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Welcome to <span>Study Junction</span>
+</h1>
+
+<p>
+Your educational platform for Classes 1 to 10.
+Learn Mathematics, Science, English and many more subjects
+with easy notes, questions and quizzes.
+</p>
+
+<div class="buttons">
+
+<a href="#classes" class="btn primary">
+Explore Classes
+</a>
+
+<a href="#quiz" class="btn secondary">
+Take Quiz
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLASSES -->
+
+<section id="classes">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Choose Your Class</h2>
+
+<p>
+Select your class and start learning.
+</p>
+
+</div>
+
+<div class="classes">
+
+<div class="class-card" onclick="openClass(1)">
+<h3>Class 1</h3>
+<p>Basic Learning</p>
+</div>
+
+<div class="class-card" onclick="openClass(2)">
+<h3>Class 2</h3>
+<p>Learning & Practice</p>
+</div>
+
+<div class="class-card" onclick="openClass(3)">
+<h3>Class 3</h3>
+<p>Notes & Questions</p>
+</div>
+
+<div class="class-card" onclick="openClass(4)">
+<h3>Class 4</h3>
+<p>Notes & Practice</p>
+</div>
+
+<div class="class-card" onclick="openClass(5)">
+<h3>Class 5</h3>
+<p>Maths & More</p>
+</div>
+
+<div class="class-card" onclick="openClass(6)">
+<h3>Class 6</h3>
+<p>Maths & Science</p>
+</div>
+
+<div class="class-card" onclick="openClass(7)">
+<h3>Class 7</h3>
+<p>Notes & Questions</p>
+</div>
+
+<div class="class-card" onclick="openClass(8)">
+<h3>Class 8</h3>
+<p>Notes & Practice</p>
+</div>
+
+<div class="class-card" onclick="openClass(9)">
+<h3>Class 9</h3>
+<p>Exam Preparation</p>
+</div>
+
+<div class="class-card" onclick="openClass(10)">
+<h3>Class 10</h3>
+<p>Exam Preparation</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section class="subject-section" id="subjects">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Popular Subjects</h2>
+
+<p>
+Learn important subjects easily.
+</p>
+
+</div>
+
+<div class="subjects">
+
+<div class="subject">
+
+<div class="icon">➕</div>
+
+<h3>Mathematics</h3>
+
+<p>
+Maths formulas, examples,
+questions and practice.
+</p>
+
+</div>
+
+
+<div class="subject">
+
+<div class="icon">🔬</div>
+
+<h3>Science</h3>
+
+<p>
+Easy Science notes,
+concepts and questions.
+</p>
+
+</div>
+
+
+<div class="subject">
+
+<div class="icon">📖</div>
+
+<h3>English</h3>
+
+<p>
+Grammar, vocabulary,
+writing and practice.
+</p>
+
+</div>
+
+
+<div class="subject">
+
+<div class="icon">🌍</div>
+
+<h3>General Knowledge</h3>
+
+<p>
+Interesting facts and
+educational quizzes.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- NOTES -->
+
+<section id="notes">
+
+<div class="container notes">
+
+<div class="notes-box">
+
+<h2>Notes & Questions</h2>
+
+<p>
+Study Junction par students ko
+chapter-wise educational material milega.
+</p>
+
+</div>
+
+<div class="notes-box">
+
+<div class="note-list">
+
+<div>✓ Chapter-wise Notes</div>
+
+<div>✓ Important Questions</div>
+
+<div>✓ Questions & Answers</div>
+
+<div>✓ Practice Worksheets</div>
+
+<div>✓ Exam Preparation</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz" id="quiz">
+
+<div class="container">
+
+<div class="title">
+
+<h2>Quick Maths Quiz</h2>
+
+<p>Test your knowledge.</p>
+
+</div>
+
+<div class="quiz-box">
+
+<h3>
+What is 7 × 8?
+</h3>
+
+<br>
+
+<div class="options">
+
+<button onclick="checkAnswer(this,48)">
+48
+</button>
+
+<button onclick="checkAnswer(this,56)">
+56
+</button>
+
+<button onclick="checkAnswer(this,64)">
+64
+</button>
+
+<button onclick="checkAnswer(this,54)">
+54
+</button>
+
+</div>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2>Contact Study Junction</h2>
+
+<p>
+For suggestions, corrections or educational content,
+contact us.
+</p>
+
+<a
+href="mailto:studyjunction@example.com"
+class="btn primary">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>Study Junction</h3>
+
+<p>
+Learn • Practice • Grow
+</p>
+
+<p>
+© 2026 Study Junction. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+function checkAnswer(button, answer){
+
+let result =
+document.getElementById("result");
+
+if(answer === 56){
+
+result.innerHTML =
+"✅ Correct Answer! Very Good.";
+
+result.style.color="green";
+
+}else{
+
+result.innerHTML =
+"❌ Wrong Answer. Correct answer is 56.";
+
+result.style.color="red";
+
+}
+
+}
+
+
+function openClass(number){
+
+alert(
+"Class " + number +
+" ka study material yahan add kiya jayega."
+);
+
+}
+
+</script>
+
+</body>
+</html>
